@@ -31,6 +31,7 @@
 
 //MARK: - 行为属性
 @property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, weak) IBOutlet UITapGestureRecognizer *mainTapGesture;
 
 //MARK: - 计时属性
 @property (nonatomic, strong) NSTimer *playTimer;
@@ -259,6 +260,12 @@
         self.handleBlock(self.currentIndex);
     }
     
+}
+- (UIScrollView *)scrollView {
+    return self.mainScrollView;
+}
+- (UITapGestureRecognizer *)tapGesture {
+    return self.mainTapGesture;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -25,6 +25,10 @@ typedef void(^SelectBlock)(NSInteger index);
 
 @property (nonatomic, weak) id<ZFBannerViewDelegate> delegate;/**< 选择代理回调*/
 @property (nonatomic, copy) SelectBlock handleBlock;/**< 选择block回调*/
+
+//MARK: - 解决Cell容器手势问题
+@property (nonatomic, readonly) UIScrollView *scrollView;
+@property (nonatomic, readonly) UITapGestureRecognizer *tapGesture;
 @end
 
 NS_ASSUME_NONNULL_END
